@@ -1,0 +1,63 @@
+/*.details {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}*/
+
+.details__list {
+  display: flex;
+  flex-direction: column;
+
+  @include list-decoration();
+}
+
+.details__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 70px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  &--housing::before {
+    top: -8px;
+    left: 21px;
+    width: 39px;
+    height: 37px;
+    background-image: url("../../img/icon-house.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--souvenirs::before {
+    top: -8px;
+    left: 22px;
+    width: 32px;
+    height: 38px;
+    background-image: url("../../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--food::before {
+    top: -4px;
+    left: 19px;
+    width: 40px;
+    height: 35px;
+    background-image: url("../../img/icon-burger.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.details__title {
+  padding: 0;
+  margin: 0;
+
+  @include text-parameters($title-size,  26px, 700, $title-color);
+}
+
+.details__text {
+  @include text-parameters($text-size,  21px, 400, $text-color);
+}

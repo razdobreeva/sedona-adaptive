@@ -1,0 +1,14 @@
+.button {
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  @include text-parameters(21px, 26px, 700, $bg-main);
+
+  text-align: center;
+  word-wrap: break-word;
+  background-color: $bg-complementary;
+  cursor: pointer;
+  border: none;
+}
