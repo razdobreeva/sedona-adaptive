@@ -1,0 +1,64 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include list-decoration();
+}
+
+.social__button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 46px;
+  height: 48px;
+  background-color: $bg-complementary;
+
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social__button--twitter,
+.social__button--facebook {
+  margin-right: 6px;
+}
+
+.social__button::after {
+  content: "";
+  position: absolute;
+}
+
+.social__button:active::after {
+  opacity: 0.3;
+}
+
+.social__button--twitter::after {
+  bottom: 16px;
+  left: 14px;
+  width: 17px;
+  height: 15px;
+  background: url("../img/icon-twitter.svg") no-repeat;
+}
+
+.social__button--facebook::after {
+  bottom: 13px;
+  left: 17px;
+  width: 12px;
+  height: 22px;
+  background: url("../img/icon-facebook.svg") no-repeat;
+}
+
+.social__button--youtube::after {
+  bottom: 16px;
+  left: 13px;
+  width: 20px;
+  height: 16px;
+  background: url("../img/icon-youtube.svg") no-repeat;
+}
